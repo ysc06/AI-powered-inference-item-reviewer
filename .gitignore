@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Node (frontend)
+frontend/node_modules/
+frontend/dist/
+
+# OS/editor
+.DS_Store
+
+# Local data / binaries
+items.db
+*.sqlite*
+*.db
+
+# Secrets
+.env
+*.env
+key.env
+
+# Docs/binaries (avoid committing big Office files)
+~$*.docx
+prompts/**/*.docx
