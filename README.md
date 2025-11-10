@@ -1,5 +1,4 @@
-# 🧑‍🏫👩‍🏫 Reading Inference Skills: Exam Content Builder and Reviewer
-An AI-Powered Exam Item Reviewer with Prompt Workflow
+# 🧑‍🏫👩‍🏫 IntelFlux -- An AI-Powered Exam Item Builder and Reviewer with Prompt Workflow 
 
 A major limitation of current NLP systems and large language models is their difficulty with inference and other higher-level reasoning tasks.
 Most models can summarize or rewrite text, but they struggle to generate questions that require multi-step reasoning or logic across multiple passages. Because of this, they provide limited support for teachers preparing instructional materials or for students who need practice with deeper comprehension skills. 
