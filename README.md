@@ -146,9 +146,9 @@ docker-compose up --build
   
 **3. Building similarity search with embeddings**  <br>
 The system detects duplicate or similar items using embeddings.This required:<br> 
--- caching embeddings so we don’t recompute them
--- managing model downloads
--- handling performance when comparing many items
+- caching embeddings so we don’t recompute them
+- managing model downloads
+- handling performance when comparing many items
 
 **4. Dockerizing the whole project** <br> 
 - Running the backend, frontend, and database inside Docker introduced issues like: <br> 
@@ -161,10 +161,12 @@ The system detects duplicate or similar items using embeddings.This required:<br
 Some stimuli are long paragraphs.I had to handle: <br> 
 - formatting
 - escaping characters
-- avoiding broken layouts in the React frontend 
+- avoiding broken layouts in the React frontend
+  
 **6. Building a reviewer-friendly interface** <br> 
 - The UI needed clear status tabs, search, and clean item display.
 - Handling loading states, errors, and async API calls added complexity.
+  
 **7. Ensuring the system is stable end-to-end** <br> 
 Because this is a full-stack + AI project, small issues in one layer often affected others.
 I learned to:
