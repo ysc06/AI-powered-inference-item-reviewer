@@ -146,12 +146,14 @@ docker-compose up --build
   
 **3. Building similarity search with embeddings**  <br>
 The system detects duplicate or similar items using embeddings.This required:<br> 
+
 - caching embeddings so we don’t recompute them
 - managing model downloads
 - handling performance when comparing many items
 
 **4. Dockerizing the whole project** <br> 
-- Running the backend, frontend, and database inside Docker introduced issues like: <br> 
+Running the backend, frontend, and database inside Docker introduced issues like: <br> 
+
 - fixing Python import paths
 - passing environment variables to Vite
 - setting up CORS correctly
