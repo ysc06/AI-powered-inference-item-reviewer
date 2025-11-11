@@ -142,18 +142,21 @@ docker-compose up --build
 - The OpenAI model sometimes returned incomplete or messy results (missing choices, too-long stems, wrong formats).I had to add validation rules and cleanup logic to make sure every generated item met the required structure. <br>
 
 **2. Handling different item states** <br> 
-- Each item can be pending, approved, rejected, or committed. Keeping these states consistent across the database, API, and frontend UI was harder than expected. I had to build a clean mapping so the backend and frontend always spoke the same “language.” <br> 
-**3. Building similarity search with embeddings**  <br< 
+- Each item can be pending, approved, rejected, or committed. Keeping these states consistent across the database, API, and frontend UI was harder than expected. I had to build a clean mapping so the backend and frontend always spoke the same “language.” <br>
+  
+**3. Building similarity search with embeddings**  <br>
 The system detects duplicate or similar items using embeddings.This required:<br> 
 -- caching embeddings so we don’t recompute them
 -- managing model downloads
 -- handling performance when comparing many items
+
 **4. Dockerizing the whole project** <br> 
 - Running the backend, frontend, and database inside Docker introduced issues like: <br> 
 - fixing Python import paths
 - passing environment variables to Vite
 - setting up CORS correctly
 - making sure the SQLite database stays persistent
+  
 **5. Showing long stimuli and text correctly in the UI** <br> 
 Some stimuli are long paragraphs.I had to handle: <br> 
 - formatting
