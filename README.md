@@ -138,14 +138,13 @@ docker-compose up --build
 
 ---
 ## Challenges
-**1. Making AI output predictable**
-- The OpenAI model sometimes returned incomplete or messy results (missing choices, too-long stems, wrong formats).I had to add validation rules and cleanup logic to make sure every generated item met the required structure.
-**2. Handling different item states**
+**1. Making AI output predictable** 
+- The OpenAI model sometimes returned incomplete or messy results (missing choices, too-long stems, wrong formats).I had to add validation rules and cleanup logic to make sure every generated item met the required structure. <br>
 
+**2. Handling different item states** 
 - Each item can be pending, approved, rejected, or committed. Keeping these states consistent across the database, API, and frontend UI was harder than expected. I had to build a clean mapping so the backend and frontend always spoke the same “language.”
-**3. Building similarity search with embeddings**<br>
-
-The system detects duplicate or similar items using embeddings.This required:<br>
+**3. Building similarity search with embeddings** 
+The system detects duplicate or similar items using embeddings.This required: 
 -- caching embeddings so we don’t recompute them
 -- managing model downloads
 -- handling performance when comparing many items
