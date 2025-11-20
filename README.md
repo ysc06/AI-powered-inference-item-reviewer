@@ -1,7 +1,5 @@
-## Reading Inference Skills: Exam Content Builder and Reviewer
-# An AI-Powered Exam Item Reviewer with Prompt Workflow
-
-A major limitation of current NLP systems and large language models is their difficulty with inference and other higher-level reasoning tasks.
+## 👩‍🏫👨‍🏫 ExamFlux
+ExamFlux is an AI-Powered Exam Item Reviewer Platform with Prompt Workflow. A major limitation of current NLP systems and large language models is their difficulty with inference and other higher-level reasoning tasks.
 Most models can summarize or rewrite text, but they struggle to generate questions that require multi-step reasoning or logic across multiple passages. Because of this, they provide limited support for teachers preparing instructional materials or for students who need practice with deeper comprehension skills. 
 
 This app provides a workflow that uses AI for generation while relying on structured prompts, validation checks, and human review to produce higher-quality inference-based exam items. It is a full-stack system built with OpenAI, Hugging Face embeddings, FastAPI, and React.
