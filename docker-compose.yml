@@ -1,0 +1,37 @@
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: exam-backend
+    env_file: [.env]
+    environment:
+      # 确保这些变量被后端读取
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DATABASE_URL=${DATABASE_URL}
+      - CORS_ORIGINS=${CORS_ORIGINS}
+      # - HF_HOME=/hf-cache   # 如需缓存 HuggingFace 模型
+    ports:
+      - "8000:8000"
+    volumes:
+      - app_data:/data
+      # - hf_cache:/hf-cache   # 可选：缓存 embeddings/model
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        - VITE_API_BASE=${VITE_API_BASE}
+    container_name: exam-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  app_data:
+  # hf_cache:
